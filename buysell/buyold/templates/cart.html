@@ -1,0 +1,34 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<title>Basic twitter application</title>
+</head>
+<body>
+<h1 class="primary">Hello</h1>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</div>
+<div>
+    <h1>Welcome to sajjanpur</h1>
+
+</div>
+<h3>Items</h3>
+{% for itemcart in items %}
+<div>
+            <h4>{{ itemcart.item.name }}</h4>
+            <form method="post" action="removeItemPost">
+            {% csrf_token %}
+            <input type="hidden" name="item_id" value="{{itemcart.item.item_id}}">
+            <input type="submit" value="remove">
+            </form>
+</div>
+        {% endfor %}
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<title>Basic twitter application</title>
+</head>
+<body>
+<h1 class="primary">Hello</h1>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</div>
+<div>
+    <form type="post" method="post" action="regPost">
+    {% csrf_token %}
+    <h4>Basic details:</h4>
+    <br><span>name:</span><input name="name" value="" type="text">
+    <br><span>enno:</span><input name="enno" value="" type="text">
+    <br><span>password:</span><input name="password" value="" type="text">
+    <br><span>email:</span><input name="email_id" value="" type="text">
+    <br><span>mobile:</span><input name="mob" value="" type="text">
+    <h4>address</h4>
+    <br><span>city:</span><input name="city" value="" type="text">
+    <br><span>town:</span><input name="town" value="" type="text">
+    <br><span>pincode:</span><input name="pincode" value="" type="text">
+    <br><span>House No:</span><input name="house_no" value="" type="text">
+    <br><span>name:</span><input value="SignUp" type="submit">
+        
+    </form>
+
+</div>
+
+
+</body>
+</html>

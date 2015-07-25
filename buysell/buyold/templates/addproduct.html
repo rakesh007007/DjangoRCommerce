@@ -1,0 +1,38 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<title>Basic twitter application</title>
+</head>
+<body>
+<h1 class="primary">Hello</h1>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</div>
+ 
+<div>
+    <form type="post" method="post" action="productPost" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h4>Add Your product detailss:</h4>
+    <br><span>name:</span><input name="name" value="" type="text">
+    <br><span>condition:</span><input name="conditions" value="" type="text">
+     <br><span>condition:</span><input id = "image" name="image" value="" type="file" multiple>
+    <select name="categories">
+        {% for categ in categories %}
+        <option value="{{categ.name}}">{{categ.name}}</option>
+        {% endfor %}
+
+    </select>
+    <br><span>add:</span><input value="add" type="submit" >
+        
+    </form>
+
+</div>
+
+
+</body>
+</html>

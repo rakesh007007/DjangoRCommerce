@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<title>Basic twitter application</title>
+</head>
+<body>
+<h1 class="primary">Hello</h1>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</div>
+<div>
+    <form type="post" method="post" action="logPost">
+    {% csrf_token %}
+    <h4>Login to continue:</h4>
+    <br><span>email:</span><input name="email_id" value="" type="text">
+     <br><span>password:</span><input name="password" value="" type="password">
+    <br><span></span><input value = "logIn" type="submit">
+        
+    </form>
+
+</div>
+
+
+</body>
+</html>

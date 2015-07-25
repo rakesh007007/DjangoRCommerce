@@ -1,0 +1,55 @@
+<html>
+<head>
+<script>
+    function showSeller(){
+        document.getElementById('seller').style.display="block"
+    }
+
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<title>Basic twitter application</title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<div>
+    <h1>Welcome to sajjanpur</h1>
+
+</div>
+
+
+<h3>products</h3>
+ <h4>{{ product.name }}</h4>
+            <h4>Price: {{ product.price }} Rs<h4>
+            <button onclick="showSeller()">Seller: {{ product.user.name }}<button>
+            <div id="seller" style="display:none">
+            <h4>{{ product.user.name }}</h4>
+            <h4>Mob:{{ product.user.name }}</h4>
+            <h4>email:{{ product.user.email_id }}</h4>
+            <h4>city:{{ product.user.address.city }}</h4>
+            <h4>town:{{ product.user.address.town }}</h4>
+            <h4>pincode:{{ product.user.address.pincode }}</h4>
+            </div>
+            <p>{{ product.description }}</p>
+
+            
+           
+            {% for img in images%}
+            {% if product.item_id = img.item_id %}
+            <img src="{{img.image.url}}" width="100" height="100">
+            {%endif%}
+            {%endfor%}
+            <form method="post" action="addItemPost">
+            {% csrf_token %}
+            <input type="hidden" name="item_id" value="{{product.item_id}}">
+            <input type="submit" value="add to cart">
+            </form>
+       
+
+
+</body>
+</html>
